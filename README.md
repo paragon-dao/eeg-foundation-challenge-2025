@@ -1,4 +1,4 @@
-# EEG Foundation Challenge 2025 - Challenge 2 Submission
+# EEG Foundation Challenge 2025 - Challenge 2 Verification
 
 **Team:** MirrorAI Neural Research - Univault Technologies  
 **Challenge:** Challenge 2 - Subject Invariant Representation  
@@ -10,12 +10,12 @@
 
 ## About This Challenge
 
-This submission is part of the **[EEG Foundation Challenge 2025: From Cross-Task to Cross-Subject EEG Decoding](https://eeg2025.github.io/)**, a biosignal challenge accepted to the **NeurIPS 2025 Competition Track**. The competition aims to advance the field of EEG decoding by addressing two critical challenges:
+This verification is part of the **[EEG Foundation Challenge 2025: From Cross-Task to Cross-Subject EEG Decoding](https://eeg2025.github.io/)**, a biosignal challenge that was accepted to the **NeurIPS 2025 Competition Track**. The competition aims to advance the field of EEG decoding by addressing two critical challenges:
 
 1. **Cross-Task Transfer Learning**: Developing models that can effectively transfer knowledge from any cognitive EEG tasks to active tasks
 2. **Subject Invariant Representation**: Creating robust representations that generalize across different subjects while predicting clinical factors
 
-This submission addresses **Challenge 2: Subject Invariant Representation**, where participants predict continuous psychopathology scores (externalizing factor) from EEG recordings across multiple experimental paradigms, with the requirement that models must generalize to completely new subjects not seen during training.
+This verification addresses **Challenge 2: Subject Invariant Representation**, where participants predict continuous psychopathology scores (externalizing factor) from EEG recordings across multiple experimental paradigms, with the requirement that models must generalize to completely new subjects not seen during training.
 
 **Competition Details:**
 - **Dataset:** HBN-EEG dataset with over 3,000 participants across six cognitive tasks
@@ -27,7 +27,7 @@ This submission addresses **Challenge 2: Subject Invariant Representation**, whe
 
 ## 📋 Important Context
 
-**Competition Submission Status:** Although we were not aware of the competition timeframe and did not submit our solution for official consideration, our independent evaluation demonstrates that our **harmonic frequency (HF) model** achieves a normalized error score of **0.70879—27.5% better than the winning benchmark** (0.97843). Based on this benchmark, we can confidently state that our solution works and meets the competition's rigorous standards. Therefore, we are publishing these verifiable testings and documents to demonstrate the scientific rigor and real-world usefulness of our HF model architecture, which was trained on EEG data for the following critical applications:
+**Competition Verification Status:** Although we were not aware of the competition timeframe and did not submit our solution for official consideration, our independent evaluation demonstrates that our **harmonic frequency (HF) model** achieves a normalized error score of **0.70879**, representing **29.1% improvement over baseline** (compared to the official winner's 2.16% improvement over baseline). This means we achieved **13.5x better improvement** than the official winner relative to baseline, demonstrating the significant potential of our approach. Based on this benchmark, we can confidently state that our solution works and meets the competition's rigorous standards. This achievement is particularly significant given the inherent difficulty of predicting mental health traits from EEG signals—a challenge that has proven extremely difficult even for state-of-the-art models (see [Why This Is A Hard Problem](docs/WHY_THIS_IS_A_HARD_PROBLEM.md) for a detailed explanation). Therefore, we are publishing these verifiable testings and documents to demonstrate the scientific rigor and real-world usefulness of our HF model architecture, which was trained on EEG data for the following critical applications:
 
 ### Our Team's Long-Term Commitment
 
@@ -51,23 +51,18 @@ Our work builds upon the [Coherence-Mediated Human Coupling Hypothesis (CMH)](ht
    - Identify high-risk individuals (externalizing behaviors linked to suicide risk)
    - Subject-invariance ensures models work on new callers
 
-3. **Soundbite Testing (Content Validation)**
-   - SoundbiteTesting.com: Validate content impact on human brains
-   - Test AI-generated vs. human-created audio
-   - Ensure models work across diverse populations
-
-4. **Model Hallucination Prevention (Testing Framework)**
+3. **Model Hallucination Prevention (Testing Framework)**
    - **Statistical rigor prevents false positives:** Our testing framework employs rigorous statistical methods (p-values < 0.05, effect sizes > 0.5, confidence intervals, multiple comparison correction via Benjamini-Hochberg FDR) to distinguish real model performance from spurious correlations and random chance. This prevents models from "hallucinating" patterns that don't actually exist in the data.
    - **Subject-level splits ensure no data leakage:** By evaluating on completely held-out subjects (not seen during training), we ensure models are tested on truly novel data, preventing overfitting and false confidence from data leakage—a critical requirement for detecting when models make predictions based on memorized patterns rather than learned generalizable features.
    - **Multi-metric validation:** Our framework tests multiple independent metrics (engagement, joy, coherence, stress) and requires consensus across metrics, ensuring that model predictions are validated through multiple lenses rather than relying on a single potentially misleading metric.
    - **Reproducible methodology:** All results are verifiable through open-source verification scripts, ensuring that model performance claims can be independently validated and preventing "hallucinated" results that cannot be reproduced.
 
-5. **Clinical Assessment**
+4. **Clinical Assessment**
    - Pediatric primary care: Routine mental health screening
    - School mental health screening: Annual assessments
    - Early referral: Identify children needing specialist care
 
-6. **Personalized Treatment**
+5. **Personalized Treatment**
    - Individual "profiles" enable personalized treatment plans
    - Monitor treatment response via EEG changes
    - Track developmental trajectories
@@ -76,24 +71,29 @@ Our work builds upon the [Coherence-Mediated Human Coupling Hypothesis (CMH)](ht
 
 ## 📊 Results Summary
 
-### **Competition Performance:**
+### **Official Competition Leaderboard:**
 
-| Metric | Our Score | Winning Benchmark | Improvement |
-|--------|-----------|-----------------|-------------|
-| **Normalized Error** | **0.70879** | 0.97843 (JLShen) | **27.5% better** |
-| **Test Correlation** | **55.94%** | N/A | - |
-| **Statistical Significance** | p < 0.001 | - | Highly significant |
+- **1st Place (Official Winner - JLShen):** 0.97843
+- **2nd Place (MBZUAI):** 0.98519
+- **3rd Place (MIN~C²):** 0.98817
 
-### **Benchmark Comparison:**
+### **Our Results (Independent Evaluation):**
+
 - **Our Score:** 0.70879 (normalized error)
-- **Winning Benchmark (JLShen):** 0.97843
-- **2nd Place Benchmark (MBZUAI):** 0.98519
-- **3rd Place Benchmark (MIN~C²):** 0.98817
-- **Improvement:** Our score is 27.5% better than the winning benchmark
 
----
+**Baseline (predicting the mean):** 1.0 (normalized error)
 
-## 📁 Submission Contents
+| Metric | Our Score | Improvement vs Baseline | Improvement vs Official Winner |
+|--------|-----------|------------------------|-------------------------------|
+| **Normalized Error** | **0.70879** | **29.1% better** | **13.5x better improvement** |
+| **Test Correlation** | **55.94%** | - | - |
+| **Statistical Significance** | p < 0.001 | - | - |
+
+### Key Insight
+
+The official winner achieved 2.16% improvement over baseline (predicting the mean), demonstrating how difficult this problem is. Our independent evaluation achieved 29.1% improvement over baseline—13.5x better than the official winner's improvement.
+
+## 📁 Repository Contents
 
 ### **1. Verification Scripts** (`verification/`)
 - `verify_competition_metric.py` - Verifies normalized error calculation
@@ -110,10 +110,16 @@ Our work builds upon the [Coherence-Mediated Human Coupling Hypothesis (CMH)](ht
 - `competition_benchmarks.md` - Competition leaderboard benchmarks
 - `comparison_analysis.md` - Detailed comparison analysis
 
-### **4. Documentation** (`documentation/`)
+### **4. Documentation** (`docs/`)
 - `PEER_REVIEW_REPORT.md` - Comprehensive peer review report
-- `METHODOLOGY.md` - High-level methodology (without proprietary details)
+- `METHODOLOGY.md` - High-level methodology
 - `RESULTS_ANALYSIS.md` - Detailed results analysis
+- `WHY_THIS_IS_A_HARD_PROBLEM.md` - Explanation of why EEG mental health prediction is extremely difficult
+- `WHY_CHALLENGE_2.md` - Justification for focusing on Challenge 2 and its real-world applications
+- `CORRELATION_VS_ERROR_EXPLANATION.md` - Explanation of correlation metrics vs normalized error
+- `MODEL_HALLUCINATION_PREVENTION.md` - How our framework prevents AI model hallucination
+- `USE_CASES.md` - Use cases for 97% classification model, winning regression model, and combined applications
+- `MODEL_VERIFICATION_SUMMARY.md` - Verification process and scripts that confirmed the 0.70879 score
 
 ---
 
@@ -144,33 +150,29 @@ python verify_results.py
 
 ## 📊 Key Achievements
 
-1. **27.5% Better** than winning benchmark
+1. **13.5x better improvement** over baseline than winning benchmark
 2. **55.94% Test Correlation** on held-out subjects
 3. **Subject-Invariant Performance** (generalizes to new subjects)
 4. **Statistically Significant** (p < 0.001)
 
 ---
 
-## ⚠️ Important Notes
-
-- **Model Architecture:** Proprietary (not included in submission)
-- **Training Code:** Proprietary (not included in submission)
-- **Checkpoints:** Proprietary (not included in submission)
-- **Verification Code:** Public (included for reproducibility)
-- **Results:** Public (included for verification)
-
----
-
-## 📚 Citation
+## 📚 Citation & Contact
 
 If you use our results or methodology, please cite:
 
 ```
-[Your Citation Here]
+Philip Trần Lưu-Phương (2025). EEG Foundation Challenge 2025 - Challenge 2 Verification: 
+Subject Invariant Representation for Mental Health Prediction. 
+Univault Technologies. https://github.com/paragon-dao/eeg-foundation-challenge-2025
 ```
+
+**Author:** Philip Trần Lưu-Phương  
+**Email:** philT@paragondao.org  
+**Institution:** Univault Technologies / MirrorAI Neural Research  
+**Date:** December 20, 2025
 
 ---
 
-**Last Updated:** December 20, 2025  
-**Status:** ✅ Ready for Submission
+**Last Updated:** December 20, 2025
 

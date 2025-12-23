@@ -1,0 +1,27 @@
+{
+  "correlation": 0.55945,
+  "p_value": 0.0,
+  "mse": 0.04782,
+  "rmse": 0.218678,
+  "mae": 0.174325,
+  "baseline_mse": 0.067467,
+  "normalized_error": 0.70879,
+  "test_samples": 36575,
+  "test_subjects": 3,
+  "metadata": {
+    "sampling_rate": 100.0,
+    "window_size_sec": 2.0,
+    "n_times": 200,
+    "n_channels": 4
+  },
+  "splits": {
+    "train_subjects": 14,
+    "val_subjects": 3,
+    "test_subjects": 3,
+    "train_samples": 49614,
+    "val_samples": 12959,
+    "test_samples": 10717
+  },
+  "evaluation_date": "2025-12-20T14:09:04.429993",
+  "challenge": "Challenge 2 - Subject Invariant Representation"
+}

@@ -1,0 +1,25 @@
+{
+  "correlation": {
+    "value": 0.55945,
+    "percentage": 55.945,
+    "p_value": 0.0,
+    "significant": true
+  },
+  "normalized_error": {
+    "value": 0.70879,
+    "interpretation": "Lower is better (1.0 = baseline)",
+    "vs_baseline": 29.120999999999995,
+    "vs_winner": 27.558435452715063
+  },
+  "error_metrics": {
+    "mse": 0.04782,
+    "rmse": 0.218678,
+    "mae": 0.174325,
+    "baseline_mse": 0.067467
+  },
+  "dataset": {
+    "test_samples": 36575,
+    "test_subjects": 3,
+    "subject_invariant": true
+  }
+}
